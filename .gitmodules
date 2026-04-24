@@ -19,3 +19,6 @@
 [submodule "plugins/tmux-fzf"]
 	path = plugins/tmux-fzf
 	url = https://github.com/sainnhe/tmux-fzf
+[submodule "plugins/tmux-hjkl-pane-navigator"]
+	path = plugins/tmux-hjkl-pane-navigator
+	url = https://github.com/codxse/tmux-hjkl-pane-navigator
