@@ -7,6 +7,3 @@
 [submodule "plugins/tmux-yank"]
 	path = plugins/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank
-[submodule "plugins/tmux-fzf"]
-	path = plugins/tmux-fzf
-	url = https://github.com/sainnhe/tmux-fzf
