@@ -1,6 +1,3 @@
-[submodule "plugins/minimal-tmux-status"]
-	path = plugins/minimal-tmux-status
-	url = https://github.com/niksingh710/minimal-tmux-status
 [submodule "plugins/tmux-sensible"]
 	path = plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible
@@ -13,6 +10,3 @@
 [submodule "plugins/tmux-fzf"]
 	path = plugins/tmux-fzf
 	url = https://github.com/sainnhe/tmux-fzf
-[submodule "plugins/tmux-hjkl-pane-navigator"]
-	path = plugins/tmux-hjkl-pane-navigator
-	url = https://github.com/codxse/tmux-hjkl-pane-navigator
