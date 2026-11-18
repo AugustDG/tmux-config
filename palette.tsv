@@ -1,10 +1,12 @@
 # Command palette entries: category<TAB>label<TAB>tmux command.
 # Commands run after the popup closes, so prompts, menus and popups work.
+# Formats such as #{session_name} are expanded before the command runs, so
+# they also work inside display-popup shell commands.
 # Labels key the usage counts, so keep them unique.
 ws	Open projects and sessions	display-popup -E -w 70% -h 60% -T " ws " "ws"
 ws	Save session as layout	command-prompt -p "layout name:" { display-popup -T " ws capture " "ws capture --as '%%'" }
 ws	Save session as project	command-prompt -p "project name:" { display-popup -T " ws capture " "ws capture --project '%%'" }
-ws	Edit this project	display-popup -E -w 80% -h 80% "ws edit '#{session_name}'"
+ws	Edit this project	display-popup -E -w 80% -h 80% "$SHELL -lc \"ws edit '#{session_name}'\""
 ws	Stop this workspace	confirm-before -p "stop workspace #S? (y/n)" { display-popup -E "ws stop '#{session_name}'" }
 ws	Check projects and layouts	display-popup -T " ws check " "ws check"
 pane	Split right	split-window -h -c "#{pane_current_path}"
