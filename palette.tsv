@@ -1,0 +1,24 @@
+# Command palette entries: label<TAB>tmux command.
+# Commands run after the popup closes, so prompts, menus and popups work.
+Projects and sessions (ws)	display-popup -E -w 70% -h 60% -T " ws " "ws"
+Split right	split-window -h -c "#{pane_current_path}"
+Split down	split-window -v -c "#{pane_current_path}"
+New window	new-window -c "#{pane_current_path}"
+New session	command-prompt -p "new session:" { new-session -s "%%" -c "#{pane_current_path}" }
+Rename session	command-prompt -I "#S" { rename-session -- "%%" }
+Rename window	command-prompt -I "#W" { rename-window -- "%%" }
+Zoom pane	resize-pane -Z
+Hide pane	break-pane -d -n _hidden_pane
+Restore hidden pane	join-pane -s $:_hidden_pane.0
+Kill pane	confirm-before -p "kill pane? (y/n)" kill-pane
+Kill window	confirm-before -p "kill window? (y/n)" kill-window
+Kill session	confirm-before -p "kill session #S? (y/n)" kill-session
+Toggle synchronized panes	set-window-option synchronize-panes
+Toggle status bar	set-option status
+Copy mode	copy-mode
+Tree of sessions and windows	choose-tree -Zs
+Paste buffer	choose-buffer -Z
+Next layout	next-layout
+Detach	detach-client
+List key bindings	list-keys -N
+Reload config	source-file ~/.config/tmux/tmux.conf ; display-message "config reloaded"
